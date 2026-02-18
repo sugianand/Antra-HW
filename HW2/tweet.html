@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework II - Tweet Design</title>
+  <link rel="stylesheet" href="./tweet.css">
+</head>
+<body>
+  <main class="page">
+    <article class="tweet">
+      <img class="thumbnail" src="./avatar.svg" alt="Profile thumbnail">
+
+      <div class="tweet-content">
+        <div class="meta-line">
+          <span class="name">Finn Wolfhard</span>
+          <span class="metadata">@finnwolfhard &middot; Nov 6</span>
+        </div>
+
+        <p class="message">Stranger Things changed my life. Grateful for this cast, this crew, and all of you who have been with us since day one in Hawkins.</p>
+
+        <div class="actions-row" aria-label="Tweet actions">
+          <button class="action" type="button" aria-label="Reply">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6.5A7.5 7.5 0 0 1 11.5 14H20l-3.2 3.2 1.4 1.4L24 13l-5.8-5.6-1.4 1.4L20 12h-8.5A5.5 5.5 0 1 0 17 17.5h-2A3.5 3.5 0 1 1 4 14z"/>
+            </svg>
+            <span class="count">1,094</span>
+          </button>
+
+          <button class="action" type="button" aria-label="Retweet">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h12V4l4 4-4 4V9H4V7zm16 10H8v3l-4-4 4-4v3h12v2z"/>
+            </svg>
+            <span class="count">5</span>
+          </button>
+
+          <button class="action" type="button" aria-label="Like">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-7.2-4.6-9.5-8A5.7 5.7 0 0 1 12 5.4 5.7 5.7 0 0 1 21.5 13c-2.3 3.4-9.5 8-9.5 8zm0-13.9a3.7 3.7 0 0 0-6.2 4.8c1.4 2.1 5.1 4.9 6.2 5.7 1.1-.8 4.8-3.6 6.2-5.7A3.7 3.7 0 0 0 12 7.1z"/>
+            </svg>
+            <span class="count">8,402</span>
+          </button>
+
+          <button class="action" type="button" aria-label="Share">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 4h6v6h-2V7.4l-7.3 7.3-1.4-1.4L16.6 6H14V4zM6 8h5v2H8v8h8v-3h2v5H6V8z"/>
+            </svg>
+            <span class="count">&nbsp;</span>
+          </button>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

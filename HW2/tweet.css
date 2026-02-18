@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: sans-serif;
+  background: #f7f9fa;
+}
+
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tweet {
+  background: #fff;
+  border: 1px solid #cfd9de;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.thumbnail {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  flex: 0 0 48px;
+  object-fit: cover;
+}
+
+.tweet-content {
+  min-width: 0;
+  width: 100%;
+}
+
+.meta-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.name {
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.metadata {
+  color: #71767b;
+  font-size: 15px;
+}
+
+.message {
+  color: #0f1419;
+  font-size: 15px;
+  margin: 4px 0 10px;
+}
+
+.actions-row {
+  width: min(100%, 425px);
+  max-width: 425px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #536471;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  color: #536471;
+  flex: 0 0 16px;
+}
+
+.count {
+  color: #536471;
+  font-size: 13px;
+  line-height: 1;
+}
