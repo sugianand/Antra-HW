@@ -1,35 +1,149 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f7f2e6;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #2b1e0d;
+  background: linear-gradient(180deg, #faf3e2 0%, #efe0bd 100%);
 }
+
 .timer-panel {
   position: fixed;
-  top: 12px;
-  right: 12px;
-  border: 1px solid #6b4b2a;
-  padding: 8px 12px;
+  top: 18px;
+  right: 20px;
+  width: 112px;
   text-align: center;
-  background: #fff;
+  border: 2px solid #6f4f28;
+  border-radius: 10px;
+  background: #fff7e8;
+  padding: 8px 10px;
+  z-index: 10;
 }
-.container {
+
+.timer-label {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.timer-value {
+  margin: 6px 0 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.game-page {
   max-width: 980px;
-  margin: 36px auto;
+  margin: 48px auto 24px;
   padding: 0 16px;
 }
-header { text-align: center; }
-.board {
-  margin: 18px auto;
+
+.game-header {
+  text-align: center;
+}
+
+.game-header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.score-line {
+  margin: 10px 0 14px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#start-button {
+  border: 1px solid #5a3618;
+  border-radius: 8px;
+  background: #ffd18c;
+  color: #2b1e0d;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+
+#start-button:hover {
+  background: #f4b967;
+}
+
+.board-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+  padding-bottom: 8px;
+}
+
+.game-board {
   width: 848px;
+  min-width: 848px;
   display: grid;
   grid-template-columns: repeat(4, 200px);
   gap: 16px;
+  justify-content: center;
 }
+
 .hole {
   width: 200px;
   height: 200px;
   border: 2px solid brown;
   border-radius: 50%;
-  background: #fff;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: radial-gradient(circle at 50% 30%, #fffdf5 0%, #f7e8c4 78%);
+}
+
+.hole:focus-visible {
+  outline: 4px solid #c77d2b;
+  outline-offset: 2px;
+}
+
+.sprite {
+  width: 154px;
+  height: 154px;
+  position: absolute;
+  left: 50%;
+  top: 22px;
+  transform: translateX(-50%) translateY(14px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+  user-select: none;
+}
+
+.hole.has-mole .mole {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.hole.has-snake .snake {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.hole.has-mole.has-snake .mole {
+  opacity: 0.55;
+}
+
+.hole.snake-burst {
+  background: radial-gradient(circle at 50% 30%, #ffe0b5 0%, #f7c878 78%);
+}
+
+@media (max-width: 980px) {
+  .game-page {
+    margin-top: 92px;
+  }
+
+  .timer-panel {
+    top: 10px;
+    right: 10px;
+  }
 }

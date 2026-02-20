@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whac-a-Mole Project (Starter)</title>
+  <title>Whac-a-Mole Evaluation Project</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <aside class="timer-panel">
-    <p>Time Left</p>
-    <p id="timer-value">30</p>
+  <aside class="timer-panel" aria-live="polite">
+    <p class="timer-label">Time Left</p>
+    <p id="timer-value" class="timer-value">30</p>
   </aside>
 
-  <main class="container">
-    <header>
+  <main class="game-page">
+    <header class="game-header">
       <h1>Welcome to whack-a-mole</h1>
-      <p>Let's Go, your total score is <span id="score-value">0</span></p>
+      <p class="score-line">Let's Go, your total score is <span id="score-value">0</span></p>
       <button id="start-button" type="button">Start Game!</button>
     </header>
 
-    <section id="game-board" class="board" aria-label="game board"></section>
+    <section class="board-wrapper" aria-label="Whack-a-Mole board">
+      <div id="game-board" class="game-board"></div>
+    </section>
   </main>
 
   <script src="./script.js"></script>
