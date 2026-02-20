@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f2e6;
+}
+.timer-panel {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  border: 1px solid #6b4b2a;
+  padding: 8px 12px;
+  text-align: center;
+  background: #fff;
+}
+.container {
+  max-width: 980px;
+  margin: 36px auto;
+  padding: 0 16px;
+}
+header { text-align: center; }
+.board {
+  margin: 18px auto;
+  width: 848px;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 16px;
+}
+.hole {
+  width: 200px;
+  height: 200px;
+  border: 2px solid brown;
+  border-radius: 50%;
+  background: #fff;
+}
